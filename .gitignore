@@ -1,3 +1,4 @@
 node_modules
 invalid.txt
 valid.txt
+.gitignore
