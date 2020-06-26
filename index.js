@@ -41,6 +41,7 @@ const cekValid = (emailId) => new Promise((resolve, reject) => {
   .then(res => res.text())
   .then(res => {
     resolve(res)
+
   })
   .catch(err => {
     reject(err)
@@ -63,6 +64,8 @@ const cekValid = (emailId) => new Promise((resolve, reject) => {
             const $ = cheerio.load(getCekValid);
             const confirmSucces = $('form').attr('action');
             const newI = i === 0 ? 1 : i + 1
+            // console.log(confirmSucces)
+
 
             if (confirmSucces !== undefined) {             
               console.log(colors.FgGreen, `${newI}. ${email} => valid [${moment().format("HH:mm:ss")}]`, colors.Reset);
